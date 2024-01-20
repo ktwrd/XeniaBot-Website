@@ -1,7 +1,7 @@
 {include file="header.tpl"}
 
 <div class="row align-items-start" style="margin-top: 4rem;">
-    <div class="col">
+    <div class="col is-half is-full-mobile">
         <h2>The Discord Bot that's Full of features,<br/>
         but done right.</h2>
         <div class="lead">
@@ -12,7 +12,7 @@
             We know we have a small userbase, but we're proud of it. Try it today, and read the <a href="/p/guide">Getting Started Guide</a> if you'd like to understand how some features work.<br/>
         </div>
     </div>
-    <div class="col"></div>
+    <div class="col is-half is-full-mobile"></div>
 </div>
 
 <div class="mt-3">

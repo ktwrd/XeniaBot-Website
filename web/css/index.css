@@ -12,3 +12,112 @@ body {
     display: inline;
     margin-right: 0.25rem;
 }
+
+@media screen and (max-width: 768px) {
+    .col.is-full-mobile {
+      flex: none;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col.is-full-mobile {
+      flex: none;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col.is-full-mobile {
+      flex: none;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col.is-full-mobile {
+      flex: none;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col.is-full-mobile {
+      flex: none;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col.is-full-mobile {
+      flex: none;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col.is-full-mobile {
+      flex: none;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col.is-full-mobile {
+      flex: none;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col.is-full-mobile {
+      flex: none;
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 769px), print {
+    .col.is-half, .col.is-half-tablet {
+      flex: none;
+      width: 50%;
+    }
+  }
+  @media screen and (min-width: 769px), print {
+    .col.is-half, .col.is-half-tablet {
+      flex: none;
+      width: 50%;
+    }
+  }
+  @media screen and (min-width: 769px), print {
+    .col.is-half, .col.is-half-tablet {
+      flex: none;
+      width: 50%;
+    }
+  }
+  @media screen and (min-width: 769px), print {
+    .col.is-half, .col.is-half-tablet {
+      flex: none;
+      width: 50%;
+    }
+  }
+  @media screen and (min-width: 769px), print {
+    .col.is-half, .col.is-half-tablet {
+      flex: none;
+      width: 50%;
+    }
+  }
+  @media screen and (min-width: 769px), print {
+    .col.is-half, .col.is-half-tablet {
+      flex: none;
+      width: 50%;
+    }
+  }
+  @media screen and (min-width: 769px), print {
+    .col.is-half, .col.is-half-tablet {
+      flex: none;
+      width: 50%;
+    }
+  }
+  @media screen and (min-width: 769px), print {
+    .col.is-half, .col.is-half-tablet {
+      flex: none;
+      width: 50%;
+    }
+  }
+  @media screen and (min-width: 769px), print {
+    .col.is-half, .col.is-half-tablet {
+      flex: none;
+      width: 50%;
+    }
+  }
