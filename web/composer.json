@@ -1,0 +1,16 @@
+{
+    "name": "ktwrd/xenia-web",
+    "description": "Xenia Bot Website",
+    "type": "project",
+    "require": {
+        "league/commonmark": "^2.4",
+        "spatie/commonmark-highlighter": "^3.0"
+    },
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Kate Ward",
+            "email": "kate@dariox.club"
+        }
+    ]
+}
