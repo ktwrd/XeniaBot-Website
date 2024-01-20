@@ -11,6 +11,21 @@ function createSmarty()
 
     return $smarty;
 }
+function retriveGuideContent($guideId)
+{
+    if (isset($guideId) && strlen($guideId) > 0)
+    {
+        $guideId = basename($guideId);
+        $location = K_WEB_ROOT . "/guide_content/$guideId.md";
+        if (!file_exists($location))
+        {
+            return null;
+        }
+        $text = formatMarkdown(file_get_contents($location));
+        return $text;
+    }
+    return null;
+}
 function displayBlogPostToUser($post)
 {
     if (isset($post) && $post != null)

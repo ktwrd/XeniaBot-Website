@@ -1,5 +1,7 @@
 {include file="header.tpl"}
 
-<h3>Work in progress :3</h3>
+{if isset($guideContent)}
+    {$guideContent}
+{/if}
 
 {include file="footer.tpl"}
