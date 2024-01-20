@@ -1,8 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include.php');
 
-print_r($_REQUEST);
-
 if (isset($_REQUEST['tag'])) {
     $smarty->assign('filterTag', $_REQUEST['tag']);
 }
