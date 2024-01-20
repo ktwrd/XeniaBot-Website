@@ -6,10 +6,9 @@
         but done right.</h2>
         <div class="lead">
             Many discord bot's are full of features but are never implemented fully, or are extremely broken. Xenia is not one of those bots.<br/>
-            Declutter your server list and remove unnecessary Discord Bots that you don't trust. Throw away those old bots with confusing commands<br/>
-            to setup the simplest things.<br/>
+            Declutter your server list and remove unnecessary Discord Bots that you don't trust.<br/>
             <br/>
-            We know we have a small userbase, but we're proud of it. Try it today, and read the <a href="/p/guide">Getting Started Guide</a> if you'd like to understand how some features work.<br/>
+            We know we have a small userbase, but you've got to start somewhere. Try it today, and read the <a href="/p/guide">Getting Started Guide</a> if you'd like to understand how some features work.<br/>
         </div>
     </div>
     <div class="col is-half is-full-mobile"></div>
