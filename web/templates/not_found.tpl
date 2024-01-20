@@ -17,3 +17,5 @@
         <a href="/"><< go home</a>
     {/if}
 </div>
+
+{include file="footer.tpl"}
