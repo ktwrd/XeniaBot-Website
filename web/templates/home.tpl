@@ -20,6 +20,8 @@
         <a class="btn btn-primary btn-lg m-1" href="/p/invite">Invite Xenia</a>
         <a class="btn btn-outline-light btn-lg m-1" href="https://xb.kate.pet">Dashboard</a>
     </div>
+    <br/>
+    <a class="btn btn-outline-light btn-lg m-1" href="/p/blog">Blog</a>
 </div>
 
 {include file="footer.tpl"}
