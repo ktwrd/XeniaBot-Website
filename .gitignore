@@ -1,0 +1,4 @@
+# PHP Composer
+composer.phar
+web/vendor/
+.vscode
