@@ -49,4 +49,8 @@
                     </div>
                 </div>
             </nav>
+            {if !isset($container) || $container == True}
             <div class="container" style="padding-top: 1rem; padding-bottom: 2rem;">
+            {else}
+            <div>
+            {/if}

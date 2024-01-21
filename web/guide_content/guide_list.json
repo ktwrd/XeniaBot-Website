@@ -1,0 +1,23 @@
+[
+  {
+    "name": "About",
+    "type": "label",
+    "children": [
+      {
+        "name": "Role Preserve",
+        "type": "link",
+        "link": "/guide/about_rolepreserve"
+      },
+      {
+        "name": "BanSync",
+        "type": "link",
+        "link": "/guide/about_bansync"
+      }
+    ]
+  },
+  {
+    "name": "Modules",
+    "type": "link",
+    "link": "/guide/modules"
+  }
+]
