@@ -1,5 +1,6 @@
 <?php
 require_once(K_WEB_ROOT . '/include.markdown.php');
+use voku\helper\HtmlDomParser;
 function createSmarty()
 {
     require_once(K_WEB_ROOT . '/smarty/libs/Smarty.class.php');
@@ -36,6 +37,17 @@ function displayBlogPostToUser($post)
         }
     }
     return false;
+}
+function getTextBetweenTags($string, $tagname) {
+    // Create DOM from string
+    $html = HtmlDomParser::str_get_html($string);
+
+    $titles = array();
+    // Find all tags 
+    foreach($html->find($tagname) as $element) {
+        $titles[] = $element->plaintext;
+    }
+    return $titles;
 }
 function retrieveBlogPost($postId)
 {
