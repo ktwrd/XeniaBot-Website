@@ -4,7 +4,9 @@
     "type": "project",
     "require": {
         "league/commonmark": "^2.4",
-        "spatie/commonmark-highlighter": "^3.0"
+        "spatie/commonmark-highlighter": "^3.0",
+        "voku/simple_html_dom": "^4.8",
+        "voku/portable-utf8": "^6.0"
     },
     "license": "Apache-2.0",
     "authors": [
