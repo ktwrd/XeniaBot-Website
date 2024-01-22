@@ -31,6 +31,7 @@
             <article class="blog-card__box block">
                 <h1>
                     <a href="/blog/{$post['id']}">{$post['subject']}</a>
+                    {if isNewBlogPost($post)} <img src="https://res.kate.pet/icons/fuge-3.5.6/icons/new-text.png" /> {/if}
                 </h1>
                 <div class="entry-content">
                     {$post['description']}

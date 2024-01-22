@@ -1,6 +1,12 @@
 <?php
 require_once(K_WEB_ROOT . '/include.markdown.php');
 use voku\helper\HtmlDomParser;
+
+function isNewBlogPost($post)
+{
+	$weekAgo = strtotime('-1 week');
+	return $post['created_at'] > $weekAgo;
+}
 function createSmarty()
 {
     require_once(K_WEB_ROOT . '/smarty/libs/Smarty.class.php');
