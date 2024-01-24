@@ -7,6 +7,9 @@
         <meta name="theme-color" content="{$metaColor|default:"#000000"}" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="{$title|default:"Xenia Bot"}" />
+        <meta property="og:site_name" content="Xenia Bot">
+        <meta property="og:title" content="{$description|default:"Xenia Bot, it does a lot that other's don't do right."}" />
+        <meta property="og:description" content="{$description|default: "Xenia Bot, it does a lot that other's don't do right."}" />
 
         {if isset($_META)}
             {if isset($_META['image'])}
