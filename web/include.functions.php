@@ -109,7 +109,6 @@ function retrieveBlogPost($postId)
     }
     return $post;
 }
-
 function getAllBlogPosts()
 {
     $files = scandir(K_WEB_ROOT . "/blog_posts/");
@@ -137,6 +136,10 @@ function getAllBlogPosts()
         return ( $a['created_at'] < $b['created_at'] ) ? 1 : -1;
     });
     return $result;
+}
+function fetchNewBlogPosts()
+{
+    return array_slice(getAllBlogPosts(), 0, 3);
 }
 
 function doesPostHaveTag($post, $filterTag) {
