@@ -12,6 +12,11 @@
         "name": "BanSync",
         "type": "link",
         "link": "/guide/about_bansync"
+      },
+      {
+        "name": "Moderation",
+        "type": "link",
+        "link": "/guide/about_moderation"
       }
     ]
   },
