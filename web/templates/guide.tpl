@@ -43,7 +43,7 @@
 }
 </style>
 <div class="d-flex flex-nowrap">
-    <div class="flex-shrink-0 p-3" style="width: 280px; border-right: 1px solid #424242 !important; height: calc(100vh - 57px);">
+    <div class="flex-shrink-0 p-3" style="width: 280px; border-right: 1px solid #424242 !important;">
         <a href="/guide/index" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
             {* <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg> *}
             <span class="fs-5 fw-semibold">Guide</span>
