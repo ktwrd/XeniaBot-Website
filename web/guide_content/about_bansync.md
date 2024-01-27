@@ -1,6 +1,7 @@
 # About BanSync
 BanSync is one of the primary features of Xenia Bot. It's intended purpose is to warn other server moderators about dangerous and/or problematic people that may cause issues in your server.
 
+{#how-does-it-work}
 ## How does it work?
 
 <div class="row align-items-start mt-4">
@@ -14,6 +15,30 @@ BanSync is one of the primary features of Xenia Bot. It's intended purpose is to
     </div>
 </div>
 
+{#how-do-i-tell-if-someone-has-an-existing-record}
+## How do I tell if someone has an existing record?
+If you wish to see who in your server has existing records, then you can access that information via the Dashboard.
+
+<div class="row align-items-start mt-4">
+    <div class="col is-half is-full-mobile">
+        Once you have logged in, follow these steps;<br/>
+        <ol>
+            <li>Select "Manage Servers" on the homepage or the "Servers" link in the navbar.</li>
+            <li>Select the server that you wish to see existing records for</li>
+            <li>Click on the "Moderation" tab.</li>
+            <li>Under the "Ban Sync" card, click on the button that says "See Mutual Records".</li>
+        </ol>
+        If you cannot see the "See Mutual Records" button, then your server does not have Ban Sync enabled on it (see <a href="#how-do-i-get-access">How do I get access</a>)
+    </div>
+    <div class="col is-half is-full-mobile">
+        <video controls autoplay loop class="guide-img">
+            <source src="https://res.kate.pet/upload/bd9ed65345fd/firefox_QABZ8DYMD4.mp4" type="video/mp4" />
+        </video>
+    </div>
+</div>
+
+
+{#how-do-i-get-access}
 ## How do I get access?
 To get access to BanSync, your server must fill the following criteria;
 - Older than 6mo
@@ -25,8 +50,19 @@ If your server *does* meet those requirements, then you can set the BanSync log 
 
 You will be notified about the outcome of your BanSync request in the log channel you set above.
 
-If you wish, you can also follow this same process via the [Xenia Dashboard](https://xb.kate.pet).
-1. Navigate to your server settings.
-2. Select the "Moderation" tab.
-3. Set your Log Channel under the "Ban Sync" card.
-4. Request the Ban Sync feature by clicking on the "Request" button.
+<div class="row align-items-start mt-4">
+    <div class="col is-half is-full-mobile">
+        If you wish, you can also follow this same process via the <a href="https://xb.kate.pet">Xenia Dashboard</a>.<br/>
+        <ol>
+            <li>Navigate to your server settings.</li>
+            <li>Select the "Moderation" tab.</li>
+            <li>Set your Log Channel under the "Ban Sync" card.</li>
+            <li>Request the Ban Sync feature by clicking on the "Request" button.</li>
+        </ol>
+    </div>
+    <div class="col is-half is-full-mobile">
+        <video controls autoplay loop class="guide-img">
+            <source src="https://res.kate.pet/upload/c6bf6e412428/firefox_BYLTFami4b.mp4" type="video/mp4" />
+        </video>
+    </div>
+</div>
