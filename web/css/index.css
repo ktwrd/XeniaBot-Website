@@ -1,3 +1,5 @@
+@import "bootstrap.css";
+
 body {
     background-color: #121212;
     color: #fafafa;
@@ -11,9 +13,6 @@ body {
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 0.8rem 0 rgba(0, 0, 0, 0.5), 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.19);
 }
-.pt-4 {
-    padding-top: 4rem;
-}
 
 .navbar {
     background: #212121 !important;
@@ -23,113 +22,4 @@ body {
 .d-inline * {
     display: inline;
     margin-right: 0.25rem;
-}
-
-@media screen and (max-width: 768px) {
-    .col.is-full-mobile {
-        flex: none;
-        width: 100%;
-    }
-}
-@media screen and (max-width: 768px) {
-    .col.is-full-mobile {
-        flex: none;
-        width: 100%;
-    }
-}
-@media screen and (max-width: 768px) {
-    .col.is-full-mobile {
-        flex: none;
-        width: 100%;
-    }
-}
-@media screen and (max-width: 768px) {
-    .col.is-full-mobile {
-        flex: none;
-        width: 100%;
-    }
-}
-@media screen and (max-width: 768px) {
-    .col.is-full-mobile {
-        flex: none;
-        width: 100%;
-    }
-}
-@media screen and (max-width: 768px) {
-    .col.is-full-mobile {
-        flex: none;
-        width: 100%;
-    }
-}
-@media screen and (max-width: 768px) {
-    .col.is-full-mobile {
-        flex: none;
-        width: 100%;
-    }
-}
-@media screen and (max-width: 768px) {
-    .col.is-full-mobile {
-        flex: none;
-        width: 100%;
-    }
-}
-@media screen and (max-width: 768px) {
-    .col.is-full-mobile {
-        flex: none;
-        width: 100%;
-    }
-}
-@media screen and (min-width: 769px), print {
-    .col.is-half, .col.is-half-tablet {
-        flex: none;
-        width: 50%;
-    }
-}
-@media screen and (min-width: 769px), print {
-    .col.is-half, .col.is-half-tablet {
-        flex: none;
-        width: 50%;
-    }
-}
-@media screen and (min-width: 769px), print {
-    .col.is-half, .col.is-half-tablet {
-        flex: none;
-        width: 50%;
-    }
-}
-@media screen and (min-width: 769px), print {
-    .col.is-half, .col.is-half-tablet {
-        flex: none;
-        width: 50%;
-    }
-}
-@media screen and (min-width: 769px), print {
-    .col.is-half, .col.is-half-tablet {
-        flex: none;
-        width: 50%;
-    }
-}
-@media screen and (min-width: 769px), print {
-    .col.is-half, .col.is-half-tablet {
-        flex: none;
-        width: 50%;
-    }
-}
-@media screen and (min-width: 769px), print {
-    .col.is-half, .col.is-half-tablet {
-        flex: none;
-        width: 50%;
-    }
-}
-@media screen and (min-width: 769px), print {
-    .col.is-half, .col.is-half-tablet {
-        flex: none;
-        width: 50%;
-    }
-}
-@media screen and (min-width: 769px), print {
-    .col.is-half, .col.is-half-tablet {
-        flex: none;
-        width: 50%;
-    }
 }
