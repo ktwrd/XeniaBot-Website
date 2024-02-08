@@ -35,16 +35,28 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="/">Home</a>
+                                {if $pageName == "home"}
+                                    <a class="nav-link active" href="/">Home</a>
+                                {else}
+                                    <a class="nav-link" href="/">Home</a>
+                                {/if}
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/p/blog">Blog</a>
+                                {if $pageName == "blog"}
+                                    <a class="nav-link active" href="/p/blog">Blog</a>
+                                {else}
+                                    <a class="nav-link" href="/p/blog">Blog</a>
+                                {/if}
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="https://xb.kate.pet">Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/p/guide">Guide</a>
+                                {if $pageName == "guide"}
+                                    <a class="nav-link active" href="/p/guide">Guide</a>
+                                {else}
+                                    <a class="nav-link" href="/p/guide">Guide</a>
+                                {/if}
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="https://github.com/ktwrd/xeniabot">GitHub</a>
