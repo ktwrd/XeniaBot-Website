@@ -30,12 +30,12 @@ but done right.</h2>
         <div class="lead">Some of the latest blog posts released by the development team. <a href="/p/blog">See all blog posts.</a></div>
     </div>
     <div class="col is-half is-full-mobile">
-        <div class="blog-list-cards pt-4">
+        <div class="blog-list-cards pt-4 homepage-blog">
             {foreach $newBlogPosts as $post}
                 {if isset($filterTag) && !doesPostHaveTag($post, $filterTag)}
                     {continue}
                 {/if}
-                <div class="blog-card blog-card--2col">
+                <div class="blog-card homepage-blog blog-card--2col">
                     <article class="blog-card__box block">
                         <h1>
                             <a href="/blog/{$post['id']}">{$post['subject']}</a>
@@ -59,38 +59,7 @@ but done right.</h2>
         </div>
     </div>
 </div>
-<style>
-.blog-list-cards {
-    display: flex;
-    flex-wrap: wrap;
-}
-.blog-card {
-    display: flex;
-    width: 100%;
-}
-.blog-card__box {    
-    padding: .875rem;
-    color: #fff;
-    background-color: #1e1e1e;
-
-    border: 1px solid #666666;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0;
-    border-width: 0 0 1px;
-}
-.blog-card__box h1 {
-    font-size: 1.25rem;
-    margin-top: 0;
-    margin-bottom: calc(0.5rem * (1/2));
-    font-weight: 600;
-}
-.blog-card__box .entry-meta {
-    font-size: .875rem;
-    margin-top: calc(1rem * (1/2));
-}
-</style>
+<link href="/css/blog-card.css" rel="stylesheet" type="text/css" />
 
 <h2 id="demo" style="padding-top: 3rem">Demos</h2>
 Note: This is not a complete list of all modules, you can find this by seeing the <a href="/guide/modules">Module List</a>
