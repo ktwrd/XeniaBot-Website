@@ -2,18 +2,40 @@
 
 .guide-sidebar .inner {
     width: 280px;
-    border-right: 1px solid #424242 !important;
+    border-right: 1px solid #323232 !important;
+    border-bottom: 1px solid #424242 !important;
+    border-radius: 4px;
+    margin: 4px 8px;
     display: none;
-    height: 100%;
+}
+.guide-sidebar-title {
+    display: flex;
+
+    text-decoration: none;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+
+    align-items: center;
+
+    border-bottom: 1px solid #495057;
+}
+.guide-sidebar-title * {
+    display: inline;
 }
 .guide-sidebar[show] .inner {
     display: block;
 }
 .guide-sidebar .collapse {
-    display: block;
+    display: inline;
     position: fixed;
-    top: 57px;
-    left: calc(280px - 32px);
+    left: calc(280px - 32px + 6px);
+    border-radius: 4px !important;
+    margin-top: -32px;
+    border-color: rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.65);
+}
+.guide-sidebar .collapse:hover {
+    background-color: var(--bs-btn-bg) !important;
 }
 .guide-sidebar[show] .uncollapse {
     display: none;
@@ -31,6 +53,16 @@
 .guide-content {
     height: calc(100vh - 57px - 3rem);
     margin-top: 3rem;
+}
+.guide-content-inner {
+    min-height: 50vh;
+}
+.guide-content-footer {
+    padding-bottom: 3rem;
+    margin-top: 3rem;
+}
+.guide-content-footer * {
+    margin-right: 4rem;
 }
 
 @media (min-width: 700px) {

@@ -15,14 +15,22 @@ body {
 }
 
 .navbar {
-    
-    background: var(--grad-top);
+    background: #212121;
     background: -moz-linear-gradient(180deg, #212121 0%, #121212 100%);
     background: -webkit-linear-gradient(180deg, #212121 0%, #121212 100%);
     background: linear-gradient(180deg, #212121 0%, #121212 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#212121",endColorstr="#121212",GradientType=1);
 
     border-bottom: 1px solid #424242 !important;
+}
+
+.guide-sidebar .inner,
+.sidebar {
+    background: #0a0a0a;
+    background: -moz-linear-gradient(180deg, #0a0a0a 0%, #1f1f1f 100%);
+    background: -webkit-linear-gradient(180deg, #0a0a0a 0%, #1f1f1f 100%);
+    background: linear-gradient(180deg, #0a0a0a 0%, #1f1f1f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a0a0a",endColorstr="#1f1f1f",GradientType=1);
 }
 
 .d-inline * {

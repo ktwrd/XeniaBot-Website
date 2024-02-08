@@ -7,8 +7,7 @@
             <i class="bi bi-book"></i>
         </span>
         <div class="inner p-3">
-            <a href="/guide/index" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
-                {* <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg> *}
+            <a href="/guide/index" class="link-body-emphasis guide-sidebar-title">
                 <i class="bi bi-book pe-none me-2"></i>
                 <span class="fs-5 fw-semibold">Guide</span>
                 <span class="btn btn-outline-light btn-sm collapse">
@@ -23,13 +22,13 @@
         </div>
     </div>
     <div class="container guide-content">
-        <div style="min-height: 50vh">
+        <div class="guide-content-inner">
             {if isset($guideContent)}
             {$guideContent}
             {/if}
         </div>
-        <div class="margin-top: 3rem">
-            <a class="btn btn-sm btn-outline-light" style="margin-right: 4rem;" href="/guide/index"><< back to index</a>
+        <div class="guide-content-footer">
+            <a class="btn btn-sm btn-outline-light" href="/guide/index"><< back to index</a>
             <a class="btn btn-sm btn-outline-light" href="#" onclick="history.back()"><< previous page</a>
         </div>
     </div>
