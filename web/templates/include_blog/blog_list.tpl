@@ -26,7 +26,9 @@
 <div class="blog-list-cards">
     {foreach $postArray as $post}
         {if isset($filterTag) && !doesPostHaveTag($post, $filterTag)}
-            {continue}
+            {if !doesPostHaveTag($post, $filterTag)}
+                {continue}
+            {/if}
         {/if}
         <div class="blog-card blog-card--2col">
             <article class="blog-card__box block">

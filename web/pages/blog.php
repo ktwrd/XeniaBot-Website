@@ -3,6 +3,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/include.php');
 
 if (isset($_REQUEST['tag'])) {
     $smarty->assign('filterTag', $_REQUEST['tag']);
+} else {
+    $smarty->assign('filterTag', NULL);
 }
 
 $postHideState = 1;
@@ -20,13 +22,21 @@ if (isset($_REQUEST['i']))
     {
         $postHideState = isset($postContent['hide_state']) ? $postContent['hide_state'] : 2;
         $smarty->assign('post', $postContent);
-        $smarty->assign('postTitle', $postContent['subject'] . ' - Xenia Bot Blog');
+        $subject = '';
+        if (isset($postContent['subject'])) {
+            $subject = $postContent['subject'];
+        }
+        $smarty->assign('postTitle', $subject . ' - Xenia Bot Blog');
         $smarty->assign('postDescription', $postContent['description']);
     }
 
     if (displayBlogPostToUser($postContent))
     {
-        $smarty->assign('title', $postContent['subject'] . ' - Xenia Bot Blog');
+        if (!isset($postContent['subject'])) {
+            $smarty->assign('title', 'Xenia Bot Blog');
+        } else {
+            $smarty->assign('title', $postContent['subject'] . ' - Xenia Bot Blog');
+        }
         $smarty->assign('description', $postContent['description']);
     }
 }

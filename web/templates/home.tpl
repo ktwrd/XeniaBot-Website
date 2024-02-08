@@ -32,9 +32,6 @@ but done right.</h2>
     <div class="col is-half is-full-mobile">
         <div class="blog-list-cards pt-4 homepage-blog">
             {foreach $newBlogPosts as $post}
-                {if isset($filterTag) && !doesPostHaveTag($post, $filterTag)}
-                    {continue}
-                {/if}
                 <div class="blog-card homepage-blog blog-card--2col">
                     <article class="blog-card__box block">
                         <h1>
