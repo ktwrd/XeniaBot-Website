@@ -1,9 +1,11 @@
 <?php
 require 'vendor/autoload.php';
 
-// ini_set('display_errors', '1');
-// ini_set('display_startup_errors', '1');
-// error_reporting(E_ALL);
+if ($_SERVER['HTTP_HOST'] == 'xenia-beta.kate.pet') {
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
+}
 
 $time = explode(' ', microtime());
 $begintime = $time[1] + $time[0];
@@ -17,6 +19,7 @@ if (isset($_REQUEST['p']) && !isset($pageName)) {
 if (!isset($pageName) || strlen($pageName) == 0) {
     $pageName = 'home';
 }
+
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include.php');
 
@@ -68,11 +71,11 @@ try
         else
         {
             $smarty->display("$templateName.tpl");
-
-            $time = explode(' ', microtime());
-            $endtime = $time[1] + $time[0];
-            // echo "Generated in " . round(($endtime-$begintime)*1000,1) . "ms";
         }
+
+        $time = explode(' ', microtime());
+        $endtime = $time[1] + $time[0];
+        // echo "Generated in " . round(($endtime-$begintime)*1000,1) . "ms";
     }
     else
     {
