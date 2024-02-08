@@ -28,8 +28,8 @@
             {/if}
         </div>
         <div class="guide-content-footer">
-            <a class="btn btn-sm btn-outline-light" href="/guide/index"><< back to index</a>
-            <a class="btn btn-sm btn-outline-light" href="#" onclick="history.back()"><< previous page</a>
+            <a class="btn btn-sm btn-inverse" href="/guide/index"><< back to index</a>
+            <a class="btn btn-sm btn-inverse" href="#" onclick="history.back()"><< previous page</a>
         </div>
     </div>
 </div>
