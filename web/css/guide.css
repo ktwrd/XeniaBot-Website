@@ -1,7 +1,11 @@
 .dropdown-toggle { outline: 0; }
 
+:root {
+    --guide-sidebar-width: 200px;
+}
+
 .guide-sidebar .inner {
-    width: 280px;
+    width: var(--guide-sidebar-width);
     border-right: 1px solid #323232 !important;
     border-bottom: 1px solid #424242 !important;
     border-radius: 4px;
@@ -32,7 +36,7 @@
 .guide-sidebar .collapse {
     display: inline;
     position: fixed;
-    left: -calc(-280px + (32px + 7px));
+    left: -calc(-var(--guide-sidebar-width) + (32px + 7px));
     border-radius: 4px !important;
     margin-top: -32px;
     border-color: rgba(255,255,255,0.15);
@@ -40,7 +44,7 @@
     transition: 200ms;
 }
 .guide-sidebar[show] .collapse {
-    left: calc(280px - 32px + 7px);
+    left: calc(var(--guide-sidebar-width) - 32px + 7px);
 }
 .guide-sidebar .collapse:hover {
     background-color: var(--bs-btn-bg) !important;

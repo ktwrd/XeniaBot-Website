@@ -14,7 +14,7 @@
                     <i class="bi bi-x-lg"></i>
                 </span>
             </a>
-            <ul class="list-unstyled ps-0">
+            <ul class="list-unstyled p-0 m-0">
                 {foreach $guideList as $g}
                     {include file="guide_list_item.tpl" listItem=$g}
                 {/foreach}
