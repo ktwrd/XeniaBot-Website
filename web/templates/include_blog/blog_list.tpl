@@ -11,9 +11,9 @@
         <strong>Tags:</strong>
         {foreach $postTagArray as $tag}
             {if isset($filterTag) && strtolower($filterTag) == strtolower($tag)}
-                <a href="/p/blog?tag={strtolower($tag)}" style="font-weight: bold;">{$tag}</a>
+                <a class="label label-info" href="/p/blog?tag={strtolower($tag)}" style="font-weight: bold;">{$tag}</a>
             {else}
-                <a href="/p/blog?tag={strtolower($tag)}">{$tag}</a>
+                <a class="label" href="/p/blog?tag={strtolower($tag)}">{$tag}</a>
             {/if}
         {/foreach}
         {if isset($filterTag)}
@@ -41,19 +41,28 @@
                 </div>
                 <div class="entry-meta tar" style="display: block">
                     {if isset($post['created_at_f'])}
-                        <time class="ta-r" datetime="{$post['created_at_fl']}"><i class="bi bi-clock" title="Created at"></i> {$post['created_at_f']}</time>
+                        <time class="ta-r" datetime="{$post['created_at_fl']}"><i class="bi bi-calendar" title="Created at"></i> {$post['created_at_f']}</time>
                     {/if}
                     {if isset($post['updated_at_f'])}
-                        <time class="ta-r" datetime="{$post['updated_at_fl']}"><i class="bi bi-pencil" title="Updated at"></i> {$post['updated_at_f']}</time>
+                        | <time class="ta-r" datetime="{$post['updated_at_fl']}"><i class="bi bi-pencil" title="Updated at"></i> {$post['updated_at_f']}</time>
                     {/if}
                     {if isset($post['author'])}
-                    <span class="author"><i class="bi bi-person"></i>
+                    | <span class="author"><i class="bi bi-person"></i>
                         {if isset($post['author_url'])}
                              <a href="{$post['author_url']}">{$post['author']}</a>
                         {else}
                             {$post['author']}
                         {/if}
                     </span>
+                    {/if}
+                    {if isset($post['tags'])}
+                        |
+                        <div class="d-inline">
+                            <strong>Tags</strong>
+                            {foreach $post['tags'] as $t}
+                                <a class="label" href="/p/blog?tag={strtolower($t)}">{$t}</a>
+                            {/foreach}
+                        </div>
                     {/if}
                 </div>
             </article>
