@@ -18,7 +18,7 @@
 }
 .blog-card__box {    
     padding: .875rem;
-    color: #fff;
+    color: var(--bs-body-color);
     background-color: #1e1e1e;
 
     border: 1px solid #666666;
