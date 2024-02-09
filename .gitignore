@@ -2,3 +2,4 @@
 composer.phar
 web/vendor/
 .vscode
+web/include.config.php

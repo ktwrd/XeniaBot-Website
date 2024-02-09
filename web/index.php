@@ -1,16 +1,11 @@
 <?php
 require 'vendor/autoload.php';
 
-if ($_SERVER['HTTP_HOST'] == 'xenia-beta.kate.pet') {
-    ini_set('display_errors', '1');
-    ini_set('display_startup_errors', '1');
-    error_reporting(E_ALL);
-}
-
 $time = explode(' ', microtime());
 $begintime = $time[1] + $time[0];
 
 global $smarty;
+global $config;
 
 // parse target page
 if (isset($_REQUEST['p']) && !isset($pageName)) {
@@ -22,6 +17,12 @@ if (!isset($pageName) || strlen($pageName) == 0) {
 
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include.php');
+
+if ($config['show_errors']) {
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
+}
 
 $smarty->assign('pageName', $pageName);
 $smarty->assign('year', date('Y'));
