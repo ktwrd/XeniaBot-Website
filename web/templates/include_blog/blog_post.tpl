@@ -1,7 +1,7 @@
 <div class='blog-header'>
     <h1 field='title'>{$post['subject']}</h1>
     {if isset($post['created_at_f'])}
-        <h3 field='created_at'><i class="bi bi-clock"></i>{$post['created_at_f']}</h3>
+        <h3 field='created_at'><i class="bi bi-calendar"></i>{$post['created_at_f']}</h3>
     {/if}
     {if isset($post['updated_at_f'])}
         <h4 field='updated_at'><i class="bi bi-pencil"></i> {$post['updated_at_f']}</h4>
