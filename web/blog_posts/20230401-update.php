@@ -5,6 +5,8 @@ $generate_blog_post = array(
     'description' => 'Bug Fixes, Moderation Commands, Server Logging',
     'created_at' => mktime(16, 58, 44, 4, 30, 2023),
     'hide_state' => 0,
+    'author' => 'Kate Ward',
+    'author_url' => 'https://kate.pet',
     'tags' => array('Discord', 'Updates', 'Bot')
 );
 

@@ -5,6 +5,8 @@ $generate_blog_post = array(
     'description' => 'Bug Fixes, Music, Level-Up Rewards',
     'created_at' => mktime(15, 36, 54, 12, 27, 2023),
     'hide_state' => 0,
+    'author' => 'Kate Ward',
+    'author_url' => 'https://kate.pet',
     'tags' => array('Discord', 'Updates', 'Bot', 'Dashboard')
 );
 

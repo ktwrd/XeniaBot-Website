@@ -5,6 +5,8 @@ $generate_blog_post = array(
     'description' => 'Really small update. Not the smallest, but it\'s small',
     'created_at' => mktime(18, 59, 25, 1, 8, 2024),
     'hide_state' => 0,
+    'author' => 'Kate Ward',
+    'author_url' => 'https://kate.pet',
     'tags' => array('Discord', 'Updates', 'Bot', 'Dashboard')
 );
 
