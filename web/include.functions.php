@@ -84,13 +84,22 @@ function retrieveBlogPost($postId)
             $post['hide_state'] = isset($res['hide_state']) ? $res['hide_state'] : 0;
             if (isset($post['created_at']))
             {
-                $post['created_at_f'] = date('F j, Y', $post['created_at']);
+                $post['created_at_f'] = date('F jS, Y', $post['created_at']);
                 $post['created_at_fl'] = date('c', $post['created_at']);
             }
             if (isset($post['updated_at']))
             {
-                $post['updated_at_f'] = date('F j, Y', $post['updated_at']);
+                $post['updated_at_f'] = date('F jS, Y', $post['updated_at']);
                 $post['updated_at_fl'] = date('c', $post['updated_at']);
+            }
+
+            if (isset($res['author']) && strlen($res['author']) > 0)
+            {
+                $post['author'] = $res['author'];
+            }
+            if (isset($res['author_url']) && strlen($res['author_url']) > 0)
+            {
+                $post['author_url'] = $res['author_url'];
             }
 
             if (isset($res['meta']))

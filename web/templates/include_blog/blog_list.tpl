@@ -41,11 +41,19 @@
                 </div>
                 <div class="entry-meta tar" style="display: block">
                     {if isset($post['created_at_f'])}
-                        <time class="ta-r" datetime="{$post['created_at_fl']}">{$post['created_at_f']}</time>
+                        <time class="ta-r" datetime="{$post['created_at_fl']}"><i class="bi bi-clock" title="Created at"></i> {$post['created_at_f']}</time>
                     {/if}
                     {if isset($post['updated_at_f'])}
-                        <br/>
-                        <time class="ta-r" datetime="{$post['updated_at_fl']}">Updated: {$post['updated_at_f']}</time>
+                        <time class="ta-r" datetime="{$post['updated_at_fl']}"><i class="bi bi-pencil" title="Updated at"></i> {$post['updated_at_f']}</time>
+                    {/if}
+                    {if isset($post['author'])}
+                    <span class="author"><i class="bi bi-person"></i>
+                        {if isset($post['author_url'])}
+                             <a href="{$post['author_url']}">{$post['author']}</a>
+                        {else}
+                            {$post['author']}
+                        {/if}
+                    </span>
                     {/if}
                 </div>
             </article>
