@@ -3,3 +3,6 @@ composer.phar
 web/vendor/
 .vscode
 web/include.config.php
+
+web/templates/element_zoo.tpl
+web/pages/element_zoo.php
