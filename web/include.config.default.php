@@ -7,7 +7,7 @@ $config['https_enable'] = True;
 $config['show_errors'] = False;
 // Show how long it takes for a page to generate
 // type: boolean
-$config['show_gen_time'] = True;
+$config['show_gen_time'] = False;
 // Discord webhook URL for error reporting
 // type: boolean
 $config['wehook_error'] = '';
