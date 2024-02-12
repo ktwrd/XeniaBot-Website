@@ -76,7 +76,10 @@ try
 
         $time = explode(' ', microtime());
         $endtime = $time[1] + $time[0];
-        // echo "Generated in " . round(($endtime-$begintime)*1000,1) . "ms";
+        if ($config['show_gen_time'])
+        {
+            echo "Generated in " . round(($endtime-$begintime)*1000,1) . "ms";
+        }
     }
     else
     {
@@ -87,6 +90,7 @@ catch (Exception $ex)
 {
     echo "<!-- $ex -->";
     $smarty->assign('error', $pageName);
+    $smarty->assign('exception', $ex);
     $smarty->display("error.tpl");
 }
 

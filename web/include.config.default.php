@@ -5,6 +5,12 @@ $config['https_enable'] = True;
 // show php errors
 // type: boolean
 $config['show_errors'] = False;
+// Show how long it takes for a page to generate
+// type: boolean
+$config['show_gen_time'] = True;
+// Discord webhook URL for error reporting
+// type: boolean
+$config['wehook_error'] = '';
 // default timezone for server
 // type: string
 $config['timezone'] = 'Australia/Perth';
