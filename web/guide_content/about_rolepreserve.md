@@ -16,4 +16,4 @@ Xenia will store what roles a member has every hour and when a member got a role
     </div>
 </div>
 
-
+This feature can be enabled via the `/rolepreserve enable` command. Make sure that the `xenia` role is above all the roles you would like it to give back to users when they join again.
