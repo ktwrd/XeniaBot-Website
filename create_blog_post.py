@@ -43,7 +43,8 @@ hide_state = get_hide_state()
 target_ts = get_timestamp()
 def get_author_name():
     print('Author Name')
-    if h is None:
+    h = str(input('> '))
+    if len(h) < 1 or h is None:
         h = ''
     if len(h) < 1:
         return ''
