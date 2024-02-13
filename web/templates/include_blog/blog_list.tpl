@@ -58,7 +58,8 @@
                     {if isset($post['tags'])}
                         |
                         <div class="d-inline">
-                            <strong>Tags</strong>
+                            <i class="bi bi-tag"></i>
+                            Tags
                             {foreach $post['tags'] as $t}
                                 <a class="label" href="/p/blog?tag={strtolower($t)}">{$t}</a>
                             {/foreach}
