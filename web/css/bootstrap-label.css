@@ -42,13 +42,27 @@ a.badge:focus {
 }
 
 .label-important,
-.badge-important {
+.badge-important,
+.label-danger,
+.badge-danger {
   background-color: #b94a48;
 }
 
 .label-important[href],
-.badge-important[href] {
+.badge-important[href],
+.label-danger[href],
+.badge-danger[href] {
   background-color: #953b39;
+}
+
+.label-primary,
+.badge-primary {
+  background-color: #006dcc;
+}
+
+.label-primary[href],
+.badge-primary[href] {
+  background-color: #006dcc;
 }
 
 .label-warning,
@@ -82,12 +96,16 @@ a.badge:focus {
 }
 
 .label-inverse,
-.badge-inverse {
+.badge-inverse,
+.label-dark,
+.badge-dark {
   background-color: #333333;
 }
 
 .label-inverse[href],
-.badge-inverse[href] {
+.badge-inverse[href],
+.label-dark[href],
+.badge-dark[href] {
   background-color: #1a1a1a;
 }
 
