@@ -9,6 +9,7 @@ if (isset($_REQUEST['i']))
     // print_r($js);
     $smarty->assign('guideList', $js);
     if ($content == null) {
+        http_response_code(301);
         header('Location: /guide/index');
     } else {
         $r = getTextBetweenTags(strval($content), "h1");
@@ -19,5 +20,6 @@ if (isset($_REQUEST['i']))
         $smarty->assign('guideId', $guideId);
     }
 } else {
+    http_response_code(301);
     header('Location: /guide/index');
 }

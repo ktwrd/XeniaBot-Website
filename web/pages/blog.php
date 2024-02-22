@@ -16,6 +16,7 @@ if (isset($_REQUEST['i']))
     $postContent = retrieveBlogPost(basename($_REQUEST['i']));
     if ($postContent == null)
     {
+        http_response_code(301);
         header('Location: /p/blog');
     }
     else
