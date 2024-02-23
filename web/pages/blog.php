@@ -40,6 +40,11 @@ if (isset($_REQUEST['i']))
         }
         $smarty->assign('description', $postContent['description']);
     }
+    else
+    {
+        http_response_code(301);
+        header('Location: /p/blog'); 
+    }
 }
 else
 {
