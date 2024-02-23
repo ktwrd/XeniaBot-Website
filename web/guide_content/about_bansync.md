@@ -11,7 +11,7 @@ BanSync is one of the primary features of Xenia Bot. It's intended purpose is to
         Once this is recorded in Xenia's database, it will notify the moderators in all servers that Xenia shares with that banned user, but only if that server has the BanSync feature enabled.
     </div>
     <div class="col is-half is-full-mobile">
-        <img src="https://res.kate.pet/upload/ea474f3b3581/member_ban_flowchart.drawio.png" class="guide-img" />
+        <img src="https://res.kate.pet/upload/ea474f3b3581/member_ban_flowchart.drawio.png" class="guide-img p-1" style="background: #212121" />
     </div>
 </div>
 

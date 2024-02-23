@@ -26,6 +26,15 @@
 
     border-bottom: 1px solid #495057;
 }
+@media (prefers-color-scheme: light), (color-scheme: light) {
+    .guide-sidebar .inner {
+        border-right-color: #cecece !important;
+        border-bottom-color: #bebebe !important;
+    }
+    .guide-sidebar-title {
+        border-bottom-color: #b6afa8;
+    }
+}
 .guide-sidebar-title * {
     display: inline;
 }

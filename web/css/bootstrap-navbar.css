@@ -23,3 +23,14 @@
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#313131",endColorstr="#212121",GradientType=1);
     }
 }
+@media (prefers-color-scheme: light), (color-scheme: light) {
+    .navbar {
+        color: #212121 !important;
+    }
+    .nav-item .active {
+        --grad-1: #d5d5d5;
+        --grad-1: #dedede;
+        --grad-3: #d5d5d5;
+        background: #cecece;
+    }
+}
