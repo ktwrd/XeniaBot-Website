@@ -20,3 +20,6 @@ $config['blog_author_setdefault'] = False;
 $config['blog_author_default'] = Null;
 // type: string|null
 $config['blog_author_default_url'] = Null;
+
+$config['blog_title_suffix'] = 'Xenia Blog';
+$config['title_suffix'] = 'Xenia Bot';

@@ -27,16 +27,16 @@ if (isset($_REQUEST['i']))
         if (isset($postContent['subject'])) {
             $subject = $postContent['subject'];
         }
-        $smarty->assign('postTitle', $subject . ' - Xenia Bot Blog');
+        $smarty->assign('postTitle', $subject . ' - ' . $config['blog_title_suffix']);
         $smarty->assign('postDescription', $postContent['description']);
     }
 
     if (displayBlogPostToUser($postContent))
     {
         if (!isset($postContent['subject'])) {
-            $smarty->assign('title', 'Xenia Bot Blog');
+            $smarty->assign('title', $config['blog_title_suffix']);
         } else {
-            $smarty->assign('title', $postContent['subject'] . ' - Xenia Bot Blog');
+            $smarty->assign('title', $postContent['subject'] . ' - ' . $config['blog_title_suffix']);
         }
         $smarty->assign('description', $postContent['description']);
     }
@@ -59,7 +59,7 @@ else
     $postTagArray = array_unique($postTagArray);
     $smarty->assign('postTagArray', $postTagArray);
     $smarty->assign('postArray', $postArray);
-    $smarty->assign('title', 'Xenia Bot Blog');
+    $smarty->assign('title', $config['blog_title_suffix']);
     $smarty->assign('description', '');
 }
 

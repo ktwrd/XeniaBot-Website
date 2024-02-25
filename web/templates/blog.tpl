@@ -1,4 +1,4 @@
-{include file="header.tpl" title="{$postTitle|default:"Xenia Bot Blog"}" description={$description|default:""}}
+{include file="header.tpl" title="{$title|default:"Xenia Blog"}" description={$description|default:""}}
 <link href="/css/blog.css" rel="stylesheet" type="text/css" />
 {if $showPostListing}
     {include file="include_blog/blog_list.tpl" postArray=$postArray filterTag=$filterTag postTagArray=$postTagArray}
