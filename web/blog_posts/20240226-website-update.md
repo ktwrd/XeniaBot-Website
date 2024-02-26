@@ -8,4 +8,4 @@ A handful changes have been made to the website since the [last blog post](/blog
 
 ## Fixes
 - Make sure that the response code is set to `301` when doing a redirect.
-- Fix titles of some.
+- Fix titles of some pages.
