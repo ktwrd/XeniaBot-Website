@@ -25,13 +25,23 @@ foreach ($blogPosts as $post)
         $postId = $post['id'];
         $postPubDate = date('D, d M o H:i:s O', $post['created_at']);
         $postDesc = $post['description'];
+        $rssAuthor = "";
+        if (isset($post['author_email']))
+        {
+            $rssAuhtor = "
+                <author>" . $post['author_email'] . "</author>";
+        }
+        else
+        {
+            $rssAuhtor = "";
+        }
         echo
 "        <item>
                 <title>{$postTitle}</title>
                 <link>https://xenia.kate.pet/blog//blog/{$postId}</link>
                 <pubDate>{$postPubDate}</pubDate>
                 <guid>https://xenia.kate.pet/blog/{$postId}</guid>
-                <description>{$postDesc}</description>
+                <description>{$postDesc}</description>".$rssAuhtor."
         </item>
 ";
     }

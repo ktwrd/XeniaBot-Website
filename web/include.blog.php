@@ -46,6 +46,10 @@ function retrieveBlogPost($postId)
             {
                 $post['author_url'] = $res['author_url'];
             }
+            if (isset($res['author_email']) && strlen($res['author_email']) > 0)
+            {
+                $post['author_email'] = $res['author_email'];
+            }
 
             if (isset($res['meta']))
             {
