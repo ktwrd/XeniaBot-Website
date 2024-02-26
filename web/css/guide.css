@@ -144,3 +144,9 @@
 .scrollarea {
     overflow-y: auto;
 }
+
+@media print {
+    .guide-sidebar {
+        display: none;
+    }
+}
