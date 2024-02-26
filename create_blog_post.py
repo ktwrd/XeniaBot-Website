@@ -64,8 +64,26 @@ def get_author_url():
             return get_author_url()
         else:
             return h
+def get_author_email():
+    if author_email is None or len(author_name) < 1:
+        return ''
+    print ('Author Email')
+    h = str(input('> '))
+    if h is None or len(h) < 1:
+        return ''
+    else:
+        return h
+def get_tags():
+    print('Tags (comma seperated)')
+    h = str(input('>')).split(',')
+    resultArr = []
+    for item in h:
+        resultArr.append("'" + item.strip() + "'")
+    return resultArr.join(', ')
         
 author_url = get_author_url()
+author_email = get_author_email()
+post_tags = get_tags()
 
 _target_basename = './web/blog_posts/%s' % name
 
@@ -80,7 +98,8 @@ appendstr = [
 '    \'hide_state\' => %s,' % hide_state,
 '    \'author\' => \'%s\',' % author_name,
 '    \'author_url\' => \'%s\',' % author_url,
-'    \'tags\' => array()',
+'    \'author_email\' => \'%s\',' % author_email,
+'    \'tags\' => array(%s)' % post_tags,
 ');',
 '',
 '?>'
