@@ -65,8 +65,6 @@ def get_author_url():
         else:
             return h
 def get_author_email():
-    if author_email is None or len(author_name) < 1:
-        return ''
     print ('Author Email')
     h = str(input('> '))
     if h is None or len(h) < 1:
@@ -79,7 +77,7 @@ def get_tags():
     resultArr = []
     for item in h:
         resultArr.append("'" + item.strip() + "'")
-    return resultArr.join(', ')
+    return ', '.join(resultArr)
         
 author_url = get_author_url()
 author_email = get_author_email()
