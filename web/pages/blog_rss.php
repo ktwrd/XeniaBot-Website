@@ -11,7 +11,7 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>";
         <description>Recent posts by Kate</description>
         <language>en-us</language>
         <lastBuildDate><?php echo date('D, d M o H:i:s O'); ?></lastBuildDate>
-        <atom:link href="https://xenia.kate.pet/p/blog_rss" rel="self" type="application/rss+xml" />
+        <atom:link href="https://xenia.kate.pet/blog.atom" rel="self" type="application/rss+xml" />
 
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include.php');
@@ -26,22 +26,50 @@ foreach ($blogPosts as $post)
         $postPubDate = date('D, d M o H:i:s O', $post['created_at']);
         $postDesc = $post['description'];
         $rssAuthor = "";
+        $rssAuthorEmail = "";
+        $rssAuthorName = "";
         if (isset($post['author_email']))
         {
-            $rssAuhtor = "
+            $rssAuthor = "
                 <author>" . $post['author_email'] . "</author>";
+            $rssAuthorEmail = $post['author_email'];
         }
-        else
+        if (isset($post['author']))
         {
-            $rssAuhtor = "";
+            $rssAuthorName = $post['author'];
+        }
+
+        if (strlen($rssAuthorEmail) > 0 || strlen($rssAuthorName) > 0)
+        {
+            $x = "
+                <author>";
+            if (strlen($rssAuthorName) > 0) {
+                $x = $x."
+                    <name>".$rssAuthorName."</name>";
+            }
+            if (strlen($rssAuthorEmail) > 0) {
+                $x = $x."
+                    <email>".$rssAuthorEmail."</email>";
+            }
+            $x = $x."
+                </author>";
+            $rssAuthor = $x;
+        }
+
+        $postUpdStr = "";
+        if (isset($post['updated_at']))
+        {
+            $pudst = date('D, d M o H:i:s O', $post['updated_at']);
+            $postUpdStr = "
+                <updated>{$pudst}</updated>";
         }
         echo
 "        <item>
                 <title>{$postTitle}</title>
-                <link>https://xenia.kate.pet/blog//blog/{$postId}</link>
+                <link href=\"https://xenia.kate.pet/blog/{$postId}\" />
                 <pubDate>{$postPubDate}</pubDate>
                 <guid>https://xenia.kate.pet/blog/{$postId}</guid>
-                <description>{$postDesc}</description>".$rssAuhtor."
+                <description>{$postDesc}</description>".$rssAuthor.$postUpdStr."
         </item>
 ";
     }
