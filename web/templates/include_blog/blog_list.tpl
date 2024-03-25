@@ -2,7 +2,7 @@
 
 <h1>
     Blog Posts
-    <a href="/p/blog_rss">
+    <a href="/blog.atom">
         <img src="https://res.kate.pet/icons/fuge-3.5.6/bonus/icons-24/feed.png" alt="rss feed" />
     </a>
 </h1>
