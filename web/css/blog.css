@@ -1,3 +1,17 @@
 .blog-header .bi {
     margin-right: .5rem;
 }
+
+.blog-body img {
+    max-width: 100%;
+}
+@media screen and (min-width: 576px) {
+    .blog-body img {
+        max-width: 520px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .blog-body img {
+        max-width: 600px;
+    }
+}
