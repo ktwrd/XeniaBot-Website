@@ -17,6 +17,11 @@
         "name": "Moderation",
         "type": "link",
         "link": "/guide/about_moderation"
+      },
+      {
+        "name": "Warn System",
+        "type": "link",
+        "link": "/guide/about_warns"
       }
     ]
   },
