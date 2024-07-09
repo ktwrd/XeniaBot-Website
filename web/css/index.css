@@ -39,7 +39,15 @@ body {
     margin-right: 0.25rem;
 }
 
+.human-made-mark {
+    height: 3rem;
+    filter: invert();
+}
+
 @media (prefers-color-scheme: light) {
+    .human-made-mark {
+        filter: none !important;
+    }
     body {
         background-color: #fafafa;
         color: #121212;
