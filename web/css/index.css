@@ -41,6 +41,7 @@ body {
 
 .human-made-mark {
     height: 3rem;
+    max-width: 300px;
     filter: invert();
 }
 
