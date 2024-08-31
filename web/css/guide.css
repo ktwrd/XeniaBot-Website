@@ -72,7 +72,7 @@
 }
 
 .guide-content {
-    height: calc(100vh - 57px - 3rem);
+    min-height: calc(100vh - 57px - 3rem);
     margin-top: 3rem;
 }
 .guide-content-inner {
