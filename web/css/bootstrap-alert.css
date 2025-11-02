@@ -1,0 +1,119 @@
+.alert,
+.md-alert {
+    --alert-background: #fcf8e3;
+    --alert-border: #fbeed5;
+    padding: 8px 35px 8px 14px;
+    margin-bottom: 20px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: var(--alert-background);
+    border: 1px solid var(--alert-border);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.alert h4
+.md-alert h4 {
+    margin: 0;
+}
+
+.alert .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    line-height: 20px;
+}
+
+.alert-success,
+.md-alert-success,
+.md-alert-tip {
+    --alert-color: #79c777;
+    --alert-background: #262626;
+    --alert-border:#468847;
+}
+
+.alert-danger,
+.alert-error,
+.md-alert-caution,
+.md-alert-important,
+.md-alert-warning {
+    --alert-color: #f1f1f1;
+    --alert-background: #262626;
+    --alert-border: #a33533;
+}
+
+.alert-info,
+.md-alert-info,
+.md-alert-note {
+    --alert-color: #459be6;
+    --alert-background: #262626;
+    --alert-border:#0058b7;
+}
+
+@media (prefers-color-scheme: light) {
+    .alert-danger,
+    .alert-error,
+    .md-alert-caution,
+    .md-alert-important,
+    .md-alert-warning {
+        --alert-color: #b94a48;
+        --alert-background: #f2dede;
+        --alert-border: #eed3d7;
+    }
+    .alert-info,
+    .md-alert-info,
+    .md-alert-note {
+        --alert-color: #3a87ad;
+        --alert-background:#d9edf7;
+        --alert-border:#bce8f1;
+    }
+    .alert-success,
+    .md-alert-success,
+    .md-alert-tip {
+        --alert-color: #468847;
+        --alert-background: #dff0d8;
+        --alert-border:#d6e9c6;
+    }
+}
+
+.md-alert h4,
+.alert h4,
+.md-alert span:first-of-type {
+    color: var(--alert-color);
+}
+.md-alert span:first-of-type svg {
+    fill: var(--alert-border);
+}
+
+.md-alert span:first-of-type {
+    font-weight: bold;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+.md-alert span:first-of-type svg {
+    transform: scale(1.5);
+    margin-right: 1rem;
+}
+
+.alert-block {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.alert-block > p,
+.alert-block > ul {
+    margin-bottom: 0;
+}
+
+.alert-block p + p {
+    margin-top: 5px;
+}
+
+@media print {
+    .alert,
+    .md-alert {
+        --alert-color: #000;
+        --alert-background: rgba(255,255,255,0);
+        --alert-border: #000;
+    }
+}

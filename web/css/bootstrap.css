@@ -2,6 +2,7 @@
 @import "bootstrap-navbar.css";
 @import "bootstrap-label.css";
 @import "bootstrap-misc.css";
+@import "bootstrap-alert.css";
 
 .pt-4 { padding-top: 4rem; }
 .pt-3 { padding-top: 3rem; }
