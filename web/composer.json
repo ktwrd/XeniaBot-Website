@@ -1,18 +1,21 @@
 {
     "name": "ktwrd/xenia-web",
-    "description": "Xenia Bot Website",
     "type": "project",
-    "require": {
-        "league/commonmark": "^2.4",
-        "spatie/commonmark-highlighter": "^3.0",
-        "voku/simple_html_dom": "^4.8",
-        "voku/portable-utf8": "^6.0"
-    },
     "license": "Apache-2.0",
     "authors": [
         {
             "name": "Kate Ward",
             "email": "kate@dariox.club"
         }
-    ]
+    ],
+    "require": {
+        "league/commonmark": "^2.7",
+        "spatie/commonmark-highlighter": "^3.0",
+        "voku/simple_html_dom": "^4.8",
+        "voku/portable-utf8": "^6.0",
+        "matthiasmullie/minify": "^1.3",
+        "smarty/smarty": "^5.5",
+        "amoschou/commonmark-alert-extension": "dev-main"
+    },
+    "minimum-stability": "dev"
 }

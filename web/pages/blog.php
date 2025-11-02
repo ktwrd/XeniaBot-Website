@@ -1,11 +1,11 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include.php');
 
+$filterTag = NULL;
 if (isset($_REQUEST['tag'])) {
-    $smarty->assign('filterTag', $_REQUEST['tag']);
-} else {
-    $smarty->assign('filterTag', NULL);
+    $filterTag = $_REQUEST['tag'];
 }
+$smarty->assign('filterTag', $filterTag);
 
 $postHideState = 1;
 $showPostListing = False;
@@ -14,6 +14,7 @@ $showPostListing = False;
 if (isset($_REQUEST['i']))
 {
     $postContent = retrieveBlogPost(basename($_REQUEST['i']));
+
     if ($postContent == null)
     {
         http_response_code(301);
@@ -23,6 +24,7 @@ if (isset($_REQUEST['i']))
     {
         $postHideState = isset($postContent['hide_state']) ? $postContent['hide_state'] : 2;
         $smarty->assign('post', $postContent);
+        $smarty->assign('post_json', json_encode($postContent));
         $subject = '';
         if (isset($postContent['subject'])) {
             $subject = $postContent['subject'];
@@ -49,15 +51,32 @@ if (isset($_REQUEST['i']))
 else
 {
     $showPostListing = True;
-    $postArray = getAllBlogPosts();
+    $postArrayR = getAllBlogPosts();
     $postTagArray = array();
-    foreach ($postArray as $p) {
+    $seenTags = array();
+    foreach ($postArrayR as $p) {
         foreach ($p['tags'] as $t) {
-            array_push($postTagArray, $t);
+            if (in_array($t[1], $seenTags)) continue;
+            array_push($seenTags, $t[1]);
+            array_push($postTagArray, [
+                'value' => $t[1],
+                'text' => $t[0],
+                'selected' => $filterTag == NULL ? -1
+                    : (strtolower($filterTag) == $t[1] ? 1 : 0)
+            ]);
         }
     }
-    $postTagArray = array_unique($postTagArray);
     $smarty->assign('postTagArray', $postTagArray);
+
+    $postArray = array();
+    foreach ($postArrayR as $post) {
+        if (isset($filterTag) && !doesPostHaveTag($post, $filterTag)) {
+            if (!doesPostHaveTag($post, $filterTag)) {
+                continue;
+            }
+        }
+        array_push($postArray, $post);
+    }
     $smarty->assign('postArray', $postArray);
     $smarty->assign('title', $config['blog_title_suffix']);
     $smarty->assign('description', '');

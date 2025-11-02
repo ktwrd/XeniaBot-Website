@@ -1,24 +1,23 @@
 <?php
+use Smarty\Smarty;
 require_once(K_WEB_ROOT . '/include.markdown.php');
 use voku\helper\HtmlDomParser;
 
+function createSmarty()
+{
+    $smarty = new Smarty();
+    $smarty->setTemplateDir(K_WEB_ROOT . '/templates');
+    $smarty->setCompileDir('/tmp/smarty_compile');
+    $smarty->setCacheDir('/tmp/smarty_cache');
+
+    return $smarty;
+}
 function isNewBlogPost($post)
 {
 	$weekAgo = strtotime('-1 week');
 	return $post['created_at'] > $weekAgo;
 }
-function createSmarty()
-{
-    require_once(K_WEB_ROOT . '/smarty/libs/Smarty.class.php');
-
-    $smarty = new Smarty();
-    $smarty->setTemplateDir(K_WEB_ROOT . '/templates');
-    $smarty->setCompileDir('/tmp/smarty_compile');
-    $smarty->cache_dir = "/tmp/smarty_cache";
-
-    return $smarty;
-}
-function retriveGuideContent($guideId)
+function getGuideContent($guideId)
 {
     if (isset($guideId) && strlen($guideId) > 0)
     {
@@ -28,7 +27,7 @@ function retriveGuideContent($guideId)
         {
             return null;
         }
-        $text = formatMarkdown(file_get_contents($location));
+        $text = formatMarkdown(file_get_contents($location), MDF_DEFAULT | MDF_EXT_TOC);
         return $text;
     }
     return null;

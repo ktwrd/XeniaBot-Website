@@ -17,7 +17,9 @@ function retrieveBlogPost($postId)
             $post['created_at'] = $res['created_at'];
             $post['tags'] = array();
             if (isset($res['tags'])) {
-                $post['tags'] = $res['tags'];
+                foreach ($res['tags'] as $tag) {
+                    array_push($post['tags'], [$tag, strtolower($tag)]);
+                }
             }
             if (isset($res['updated_at']))
             {
@@ -63,6 +65,7 @@ function retrieveBlogPost($postId)
                     $_META = $res['meta'];
                 }
             }
+            $post['is_new'] = isNewBlogPost($post);
         }
     }
     return $post;
@@ -107,7 +110,7 @@ function doesPostHaveTag($post, $filterTag) {
 
     $state = False;
     foreach ($post['tags'] as $tag) {
-        if (strtolower($tag) == strtolower($filterTag)) {
+        if (strtolower($tag[1]) == strtolower($filterTag)) {
             $state = True;
             break;
         }

@@ -19,10 +19,11 @@ but done right.</h2>
 <div class="mt-3">
     <div class="d-inline-flex">
         <a class="btn btn-primary btn-lg m-1" href="/p/invite">Invite Xenia</a>
-        <a class="btn btn-info btn-lg m-1" href="https://xb.kate.pet">Dashboard</a>
+        <a class="btn btn-secondary btn-lg m-1" href="/guide/modules">Features</a>
     </div>
     <br/>
     <a class="btn btn-dark btn-lg m-1" href="/p/blog">Blog</a>
+    <a class="btn btn-dark btn-lg m-1" href="https://xb.kate.pet">Dashboard</a>
 </div>
 <div class="row align-items-start pt-2">
     <div class="col is-half is-full-mobile">
@@ -36,7 +37,7 @@ but done right.</h2>
                     <article class="blog-card__box block">
                         <h1>
                             <a href="/blog/{$post['id']}">{$post['subject']}</a>
-                            {if isNewBlogPost($post)} <img src="https://res.kate.pet/icons/fuge-3.5.6/icons/new-text.png" /> {/if}
+                            {if $post['is_new']} <img src="https://res.kate.pet/icons/fuge-3.5.6/icons/new-text.png" /> {/if}
                         </h1>
                         <div class="entry-content">
                             {$post['description']}
@@ -57,7 +58,7 @@ but done right.</h2>
     </div>
 </div>
 <link href="/css/blog-card.css" rel="stylesheet" type="text/css" />
-
+<!--
 <h2 id="demo" style="padding-top: 3rem">Demos</h2>
 Note: This is not a complete list of all modules, you can find this by seeing the <a href="/guide/modules">Module List</a>
 <div class="row align-items-start mt-4">
@@ -73,6 +74,7 @@ Note: This is not a complete list of all modules, you can find this by seeing th
             src="https://res.kate.pet/upload/03bcb777-911d-4774-9454-523b3b238267/DiscordCanary_S5Wm6jtwOd.gif" />
     </div>
 </div>
+-->
 
 
 {include file="footer.tpl"}
