@@ -22,6 +22,11 @@
         "name": "Warn System",
         "type": "link",
         "link": "/guide/about_warns"
+      },
+      {
+        "name": "Permissions",
+        "type": "link",
+        "link": "/guide/required_permissions"
       }
     ]
   },
