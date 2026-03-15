@@ -33,7 +33,7 @@ if (!function_exists('formatMarkdown'))
                 'wrap' => [
                     'enabled' => true,
                     'tag' => 'div',
-                    'attributes' => ['class' => 'table-responsive'],
+                    'attributes' => ['class' => 'table table-responsive table-responsive-sm'],
                 ]
             ],
         ];
