@@ -1,6 +1,6 @@
 # Xenia Bot Guide
 
-Work-in-progress. If you have any questions or you're confused, please don't hesitate [to join our server]() and ask some questions.
+Work-in-progress. If you have any questions or you're confused, please don't hesitate [to join our server](https://discord.gg/UMzjTrC2U8) and ask some questions.
 
 - [Modules](/guide/modules)
     - [About Moderation](/guide/about_moderation)
