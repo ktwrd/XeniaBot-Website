@@ -1,7 +1,7 @@
 <?php
 
 $userId = '1067393803427790929';
-$permissions = '415471496439';
+$permissions = '4504974285851845';
 
 $url = 'https://discord.com/oauth2/authorize?client_id='.$userId.'&scope=bot&permissions='.$permissions;
 
