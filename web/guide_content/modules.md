@@ -16,3 +16,5 @@ Note: This is not a complete list and it does not include features that are curr
     * [Role Preserve](/guide/about_rolepreserve)
 - Reminders
 - [Level System](/guide/about_leveling)
+
+You can find at a comprehensive list of Xenia's commands on: [discordbotlist.com](https://discordbotlist.com/bots/xenia/commands)
