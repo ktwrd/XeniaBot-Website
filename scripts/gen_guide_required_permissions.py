@@ -36,7 +36,9 @@ modules = [
             "EMBED_LINKS"
         ],
         "optional": [],
-        "notes": {}
+        "notes": {
+            "BYPASS_SLOWMODE": "This is strongly recommended to not cause any errors with Xenia."
+        }
     },
     {
         "name": "Moderation",
@@ -54,11 +56,14 @@ modules = [
         "name": "Server Logging",
         "items": [
             "VIEW_AUDIT_LOG",
+            "READ_MESSAGE_HISTORY",
             "SEND_MESSAGES",
             "BAN_MEMBERS"
         ],
         "optional": [],
         "notes": {
+            "VIEW_AUDIT_LOG": "Required to get details about any moderation actions.",
+            "READ_MESSAGE_HISTORY": "Required to get messages that Xenia might've missed during server downtime.",
             "SEND_MESSAGES": "Required in all logging channels.",
             "BAN_MEMBERS": "Required to get ban information."
         }
@@ -66,7 +71,8 @@ modules = [
     {
         "name": "Warn System",
         "items": [
-            "SEND_MESSAGES"
+            "SEND_MESSAGES",
+            "EMBED_LINKS"
         ],
         "optional": [],
         "notes": {
@@ -76,8 +82,12 @@ modules = [
     {
         "name": "Role Preservation",
         "items": [
+            "VIEW_AUDIT_LOG",
             "MANAGE_ROLES",
-            "SEND_MESSAGES"
+            "MODERATE_MEMBERS",
+            "SEND_MESSAGES",
+            "EMBED_LINKS",
+            "ATTACH_FILES",
         ],
         "optional": [],
         "notes": {
@@ -91,14 +101,32 @@ modules = [
             "BAN_MEMBERS",
             "VIEW_AUDIT_LOG",
             "SEND_MESSAGES",
+            "ATTACH_FILES",
             "MENTION_EVERYONE"
         ],
         "optional": [],
         "notes": {
             "BAN_MEMBERS": "**Required** to see ban information, and to receive member ban events.",
-            "VIEW_AUDIT_LOG": "Used to figure out who banned a member",
+            "VIEW_AUDIT_LOG": "**REQUIRED** to figure out who banned a member.",
             "SEND_MESSAGES": "**Required** for BanSync notifications, only in the BanSync Log Channel.",
             "MENTION_EVERYONE": "**Required** for BanSync notifications, only in the BanSync Log Channel."
+        }
+    },
+    {
+        "name": "User Approval",
+        "items": [
+            "VIEW_AUDIT_LOG",
+            "SEND_MESSAGES",
+            "ATTACH_FILES",
+            "EMBED_LINKS",
+            "MODERATE_MEMBERS"
+        ],
+        "optional": [],
+        "notes": {
+            "SEND_MESSAGES": "**Required** in log channel and post-approval greeter channel.",
+            "EMBED_LINKS": "**Required** in log channel and post-approval greeter channel.",
+            "ATTACH_FILES": "**Required** in log channel.",
+            "MODERATE_MEMBERS": "Used to give approved members the configured \"approved\" role."
         }
     }
 ]
@@ -111,16 +139,27 @@ def build_main_table():
     for key in permission_names.keys():
         permissions[key] = {
             'modules': [],
-            'required': False
+            'required': False,
+            'notes': ''
         }
+    required_any_notes = False
     for module in modules:
         if module['name'] == 'Required Permissions':
             for item in module['items']:
                 permissions[item]['required'] = True
+                notes = module['notes'].get(item)
+                if notes is not None:
+                    permissions[item]['notes'] = notes
+                    if len(notes) > 0:
+                        required_any_notes = True
         else:
             for item in module['items']:
                 permissions[item]['modules'].append(module['name'])
     
+    if required_any_notes:
+        content[0] += ' Notes |'
+        content[1] += ' - |'
+
     for key in permissions.keys():
         required_value = ''
         if permissions[key]['required']:
@@ -133,7 +172,13 @@ def build_main_table():
         used_by = ', '.join(permissions[key]['modules'])
         if permissions[key]['required']:
             used_by = '**Everything**'
-        content.append('| %s | %s | %s |' % (permission_names[key], required_value, used_by))
+        line = '| %s | %s | %s |' % (permission_names[key], required_value, used_by)
+        if required_any_notes:
+            notes = ''
+            if permissions[key]['notes'] is not None and len(permissions[key]['notes']) > 0:
+                notes = permissions[key]['notes']
+            line += ' %s |' % notes
+        content.append(line)
     return content
 
 
