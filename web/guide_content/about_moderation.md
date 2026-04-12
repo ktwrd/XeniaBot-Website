@@ -14,14 +14,22 @@ Just like many other bots, Xenia has the ability to log events in the server. Th
 - Member Leave
 - Member Banned
 - Member Kicked
+- Member Updated (currently only includes roles & permissions)
+- Role Created/Edited/Deleted
 - Message Edited
     * Displayed in the same format as a the `diff` command
 - Message Delete
-    * Note: In the future this will also save the attachments in the message.
-- Channel Delete
-- Channel Edit
-- Channel Create
+- Channel Create/Edit/Delete
 - Member Voice Change
     * Joined, Left, Muted (user & server), Deafened (user & server)
 
-The Server Logging feature can be configured via [the dashboard](https://xb.kate.pet) and with the `/log setchannel` command.
+The Server Logging feature can be configured via [the dashboard](https://xb.kate.pet).
+
+To send all logging events to a channel, you can run the `/log add-event` command and select the `Fallback` option for the event.
+If you add another event to a different channel, then it won't be sent to the fallback channel.
+
+To see what channels are used for a specific event, you can run the `/log get-channels` command. To get what events are used for a channel, you can run the `/log get-channel-events` command.
+
+Once you have configured logging, make sure that you enable it with `/log enable`.
+
+If you want to easily bulk-update log events, then you can go to the Moderation settings in the [Xenia Dashboard](https://xb.kate.pet) for your guild/server.
