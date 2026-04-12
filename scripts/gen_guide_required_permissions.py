@@ -58,14 +58,18 @@ modules = [
             "VIEW_AUDIT_LOG",
             "READ_MESSAGE_HISTORY",
             "SEND_MESSAGES",
+            "EMBED_LINKS",
+            "ATTACH_FILES",
             "BAN_MEMBERS"
         ],
         "optional": [],
         "notes": {
-            "VIEW_AUDIT_LOG": "Required to get details about any moderation actions.",
+            "VIEW_AUDIT_LOG": "Required to get details about any moderation actions. ([source](https://docs.discord.com/developers/resources/audit-log))",
             "READ_MESSAGE_HISTORY": "Required to get messages that Xenia might've missed during server downtime.",
-            "SEND_MESSAGES": "Required in all logging channels.",
-            "BAN_MEMBERS": "Required to get ban information."
+            "SEND_MESSAGES": "**Required in all logging channels.**",
+            "EMBED_LINKS": "**Required in all logging channels.**",
+            "ATTACH_FILES": "Files are attached to log messages when they're too big to fit in the log message itself.\n**This permission is required** for Xenia to properly communicate to moderators about log events.",
+            "BAN_MEMBERS": "Required for Xenia to know when a member is banned. ([source](https://docs.discord.com/developers/events/gateway-events#guild-ban-add))"
         }
     },
     {
@@ -76,7 +80,8 @@ modules = [
         ],
         "optional": [],
         "notes": {
-            "SEND_MESSAGES": "Required in log channel."
+            "SEND_MESSAGES": "**Required** in log channel.",
+            "EMBED_LINKS": "**Required** in log channel."
         }
     },
     {
@@ -91,8 +96,8 @@ modules = [
         ],
         "optional": [],
         "notes": {
-            "MANAGE_ROLES": "Required to update user roles when they re-join your guild.",
-            "SEND_MESSAGES": "Only in the log channel used for Role Preservation."
+            "MANAGE_ROLES": "Required to give users roles when they re-join. ([source](https://docs.discord.com/developers/resources/guild#add-guild-member-role))",
+            "SEND_MESSAGES": "**Required** in the log channel configured via `/log add-event MemberJoin (channel)`"
         }
     },
     {
@@ -106,7 +111,7 @@ modules = [
         ],
         "optional": [],
         "notes": {
-            "BAN_MEMBERS": "**Required** to see ban information, and to receive member ban events.",
+            "BAN_MEMBERS": "**Required** to see ban information, and to receive member ban events.\n*Xenia will never automatically ban anyone.*",
             "VIEW_AUDIT_LOG": "**REQUIRED** to figure out who banned a member.",
             "SEND_MESSAGES": "**Required** for BanSync notifications, only in the BanSync Log Channel.",
             "MENTION_EVERYONE": "**Required** for BanSync notifications, only in the BanSync Log Channel."
@@ -119,6 +124,7 @@ modules = [
             "SEND_MESSAGES",
             "ATTACH_FILES",
             "EMBED_LINKS",
+            "MANAGE_ROLES",
             "MODERATE_MEMBERS"
         ],
         "optional": [],
@@ -126,7 +132,7 @@ modules = [
             "SEND_MESSAGES": "**Required** in log channel and post-approval greeter channel.",
             "EMBED_LINKS": "**Required** in log channel and post-approval greeter channel.",
             "ATTACH_FILES": "**Required** in log channel.",
-            "MODERATE_MEMBERS": "Used to give approved members the configured \"approved\" role."
+            "MANAGE_ROLES": "Used to give approved members the configured \"approved\" role. ([source](https://docs.discord.com/developers/resources/guild#add-guild-member-role))"
         }
     }
 ]
@@ -177,7 +183,7 @@ def build_main_table():
             notes = ''
             if permissions[key]['notes'] is not None and len(permissions[key]['notes']) > 0:
                 notes = permissions[key]['notes']
-            line += ' %s |' % notes
+            line += ' %s |' % notes.replace('\n', '<br/>')
         content.append(line)
     return content
 

@@ -4,7 +4,7 @@ When inviting Xenia to your server, there's a few permissions that are required 
 
 | Permission | Required | Used by modules | Notes |
 | - | - | - | - |
-| Manage Roles | ⚠️ | Role Preservation |  |
+| Manage Roles | ⚠️ | Role Preservation, User Approval |  |
 | Ban Members | ⚠️ | Server Logging, BanSync |  |
 | Attach Files | ✔️ | **Everything** |  |
 | Read Message History | ✔️ | **Everything** |  |
@@ -32,26 +32,28 @@ The following are tables that include a per-module breakdown of what permissions
 
 | Permission | Required | Notes |
 | - | - | - |
-| View Audit Log | ✔️ | Required to get details about any moderation actions. |
+| View Audit Log | ✔️ | Required to get details about any moderation actions. ([source](https://docs.discord.com/developers/resources/audit-log)) |
 | Read Message History | ✔️ | Required to get messages that Xenia might've missed during server downtime. |
-| Send Messages | ✔️ | Required in all logging channels. |
-| Ban Members | ✔️ | Required to get ban information. |
+| Send Messages | ✔️ | **Required in all logging channels.** |
+| Embed Links | ✔️ | **Required in all logging channels.** |
+| Attach Files | ✔️ | Files are attached to log messages when they're too big to fit in the log message itself.<br>**This permission is required** for Xenia to properly communicate to moderators about log events. |
+| Ban Members | ✔️ | Required for Xenia to know when a member is banned. ([source](https://docs.discord.com/developers/events/gateway-events#guild-ban-add)) |
 
 ### Warn System
 
 | Permission | Required | Notes |
 | - | - | - |
-| Send Messages | ✔️ | Required in log channel. |
-| Embed Links | ✔️ |  |
+| Send Messages | ✔️ | **Required** in log channel. |
+| Embed Links | ✔️ | **Required** in log channel. |
 
 ### Role Preservation
 
 | Permission | Required | Notes |
 | - | - | - |
 | View Audit Log | ✔️ |  |
-| Manage Roles | ✔️ | Required to update user roles when they re-join your guild. |
+| Manage Roles | ✔️ | Required to give users roles when they re-join. ([source](https://docs.discord.com/developers/resources/guild#add-guild-member-role)) |
 | Moderate Members | ✔️ |  |
-| Send Messages | ✔️ | Only in the log channel used for Role Preservation. |
+| Send Messages | ✔️ | **Required** in the log channel configured via `/log add-event MemberJoin (channel)` |
 | Embed Links | ✔️ |  |
 | Attach Files | ✔️ |  |
 
@@ -59,7 +61,7 @@ The following are tables that include a per-module breakdown of what permissions
 
 | Permission | Required | Notes |
 | - | - | - |
-| Ban Members | ✔️ | **Required** to see ban information, and to receive member ban events. |
+| Ban Members | ✔️ | **Required** to see ban information, and to receive member ban events.<br>*Xenia will never automatically ban anyone.* |
 | View Audit Log | ✔️ | **REQUIRED** to figure out who banned a member. |
 | Send Messages | ✔️ | **Required** for BanSync notifications, only in the BanSync Log Channel. |
 | Attach Files | ✔️ |  |
@@ -73,4 +75,5 @@ The following are tables that include a per-module breakdown of what permissions
 | Send Messages | ✔️ | **Required** in log channel and post-approval greeter channel. |
 | Attach Files | ✔️ | **Required** in log channel. |
 | Embed Links | ✔️ | **Required** in log channel and post-approval greeter channel. |
-| Moderate Members | ✔️ | Used to give approved members the configured "approved" role. |
+| Manage Roles | ✔️ | Used to give approved members the configured "approved" role. ([source](https://docs.discord.com/developers/resources/guild#add-guild-member-role)) |
+| Moderate Members | ✔️ |  |
