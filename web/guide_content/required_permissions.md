@@ -53,9 +53,9 @@ The following are tables that include a per-module breakdown of what permissions
 | View Audit Log | ✔️ |  |
 | Manage Roles | ✔️ | Required to give users roles when they re-join. ([source](https://docs.discord.com/developers/resources/guild#add-guild-member-role)) |
 | Moderate Members | ✔️ |  |
-| Send Messages | ✔️ | **Required** in the log channel configured via `/log add-event MemberJoin (channel)` |
-| Embed Links | ✔️ |  |
-| Attach Files | ✔️ |  |
+| Send Messages | ✔️ | **Required** in the log channel configured via `/log add-event RolePreserve (channel)` |
+| Embed Links | ✔️ | **Required** in the log channel configured via `/log add-event RolePreserve (channel)` |
+| Attach Files | ✔️ | **Required** in the log channel configured via `/log add-event RolePreserve (channel)` |
 
 ### BanSync
 

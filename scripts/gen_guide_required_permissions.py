@@ -97,7 +97,9 @@ modules = [
         "optional": [],
         "notes": {
             "MANAGE_ROLES": "Required to give users roles when they re-join. ([source](https://docs.discord.com/developers/resources/guild#add-guild-member-role))",
-            "SEND_MESSAGES": "**Required** in the log channel configured via `/log add-event MemberJoin (channel)`"
+            "SEND_MESSAGES": "**Required** in the log channel configured via `/log add-event RolePreserve (channel)`",
+            "EMBED_LINKS": "**Required** in the log channel configured via `/log add-event RolePreserve (channel)`",
+            "ATTACH_FILES": "**Required** in the log channel configured via `/log add-event RolePreserve (channel)`"
         }
     },
     {
