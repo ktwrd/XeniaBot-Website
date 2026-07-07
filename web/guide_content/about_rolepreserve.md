@@ -48,7 +48,7 @@ The Role Preserve feature is also the first module to include an audit log! Curr
 | `/rolepreserve enable`           | Manage Guild                        | Manage Roles                         |
 | `/rolepreserve disable`          | Manage Guild                        | Manage Roles                         |
 | `/rolepreserve blacklist`        | Manage Roles **OR** Manage Guild    | Manage Roles                         |
-| `/rolepreserve blacklist-remove` | Manage Roles **OR** Manage Guild    | Manage Roles                         |
+| `/rolepreserve blacklist-add`    | Manage Roles **OR** Manage Guild    | Manage Roles                         |
 | `/rolepreserve blacklist-remove` | Manage Roles **OR** Manage Guild    | Manage Roles                         |
 
 <div class="row align-items-start mt-4">
