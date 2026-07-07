@@ -26,6 +26,7 @@ As of Xenia 1.17, you can ignore specific roles from being given back to a user 
 
 >[!NOTE]
 > In previous versions of Xenia, some events will always send to a log channel for the "Member Join" event, specifically when Xenia is unable to give a role back to a user.
+>
 > This behavior still exists in Xenia 1.17 (and later), but it will be overridden if you add a "Role Preserve" log event to a channel.
 
 In order for the Role Blacklist to properly work, you need to do the following:
